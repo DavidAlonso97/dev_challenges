@@ -1,13 +1,13 @@
 class LocalStorageService {
-    get = key => localStorage.getItem(key);
+  get = (key) => localStorage.getItem(key);
 
-    set = (key, data) => {
-        localStorage.setItem(key, data);
-    };
+  set = (key, data) => {
+    localStorage.setItem(key, data);
+  };
 
-    remove = key => {
-        localStorage.removeItem(key);
-    };
+  remove = (key) => {
+    localStorage.removeItem(key);
+  };
 }
 
 export default new LocalStorageService();
