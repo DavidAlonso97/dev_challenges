@@ -1,3 +1,8 @@
+# Considerations from devs:
+
+This app was built thinking on a single room situation, it means that could not exist collisions on issues when persisted on Redis.
+If is needed multiple rooms, many changes are required in order to avoid collisions with the issue number as a key. Maybe a solution could be use the room identifier (Like a hash) and with that id, persist the json with all the data.
+
 # Workana Hiring challenge
 
 Hi!
