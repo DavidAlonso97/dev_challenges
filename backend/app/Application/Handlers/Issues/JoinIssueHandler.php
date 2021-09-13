@@ -57,7 +57,6 @@ class JoinIssueHandler
         }
         $this->issueRepository->save($issue);
 
-        //todo add to a queue
         $this->webSocketService->pushEvent(
             strval($issue->getNumber()),
             'user-joined',
