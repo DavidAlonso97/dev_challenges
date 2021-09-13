@@ -3,6 +3,10 @@
 This app was built thinking on a single room situation, it means that could not exist collisions on issues when persisted on Redis.
 If is needed multiple rooms, many changes are required in order to avoid collisions with the issue number as a key. Maybe a solution could be use the room identifier (Like a hash) and with that id, persist the json with all the data.
 
+### Issues to do (backend):
+- Pusher calls should needs to be executed on queues. Thats because its an external fetch and affects the endpoints performance.
+- RedisClient must be injected on Concrete repositories classes. For some reason, DI dont like that and does not work perfeclty, so a new instance of redisClient was intanced, but a better practice is make an instance injectable.
+
 # Workana Hiring challenge
 
 Hi!
