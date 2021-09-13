@@ -7,21 +7,21 @@ import SignUp from "../views/SignUp.vue";
 Vue.use(Router);
 
 const routes = [
-    {
-        path: '/',
-        name: 'Home',
-        component: Home
-    },
-    {
-        path: '/signup',
-        name: 'SignUp',
-        component: SignUp
-    },
-    {
-        path: '/lobby/:issue',
-        name: 'Lobby',
-        component: Lobby
-    }
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
+  },
+  {
+    path: "/signup",
+    name: "SignUp",
+    component: SignUp,
+  },
+  {
+    path: "/lobby/:issue",
+    name: "Lobby",
+    component: Lobby,
+  },
 ];
 
-export default new Router({routes});
+export default new Router({ routes });
