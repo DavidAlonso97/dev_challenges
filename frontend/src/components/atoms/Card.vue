@@ -1,5 +1,8 @@
 <template>
-  <div :class="{selected: this.selected, disabled: this.disabled}" @click="!disabled ? $emit('select-card') : null">
+  <div
+    :class="{ selected: this.selected, disabled: this.disabled }"
+    @click="!disabled ? $emit('select-card') : null"
+  >
     <slot></slot>
   </div>
 </template>
@@ -7,8 +10,8 @@
 <script>
 export default {
   name: "Card",
-  props: ['selected', 'disabled'],
-}
+  props: ["selected", "disabled"],
+};
 </script>
 
 <style scoped>

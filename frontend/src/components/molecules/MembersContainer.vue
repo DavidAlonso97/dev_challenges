@@ -2,10 +2,16 @@
   <div class="members">
     <ul id="memberList">
       <li v-for="member in this.members" :key="member.name">
-        <div class="status">{{member.vote || member.status === 'Passed' ? '✅' : ''}}</div>
-        <div class="name">{{member.user}} {{member.user === you ? '(you)' : null}}</div>
+        <div class="status">
+          {{ member.vote || member.status === "Passed" ? "✅" : "" }}
+        </div>
+        <div class="name">
+          {{ member.user }} {{ member.user === you ? "(you)" : null }}
+        </div>
         <div class="vote" v-if="issueStatus === 'Voting'">-</div>
-        <div class="vote"  v-if="issueStatus === 'Finished'">{{member.vote ? member.vote : 'Passed'}}</div>
+        <div class="vote" v-if="issueStatus === 'Finished'">
+          {{ member.vote ? member.vote : "Passed" }}
+        </div>
       </li>
     </ul>
   </div>
@@ -16,11 +22,13 @@ import authStorage from "../../services/localStorage/authStorage";
 
 export default {
   name: "MembersContainer",
-  props: {members: Array, issueStatus: String},
+  props: { members: Array, issueStatus: String },
   computed: {
-    you() {return authStorage.getUsername()}
+    you() {
+      return authStorage.getUsername();
+    },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -44,10 +52,10 @@ export default {
   margin: auto;
 }
 #memberList li div.name {
-  color: #FFF;
+  color: #fff;
 }
 #memberList li div.vote {
-  color: #FFF;
+  color: #fff;
   text-shadow: none;
   font-size: 1em;
 }

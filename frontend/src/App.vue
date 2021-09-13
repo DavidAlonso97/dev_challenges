@@ -1,18 +1,17 @@
 <template>
   <div id="app">
-    <Header/>
+    <Header />
     <router-view />
   </div>
 </template>
 
 <script>
-
 import Header from "./components/molecules/Header";
 
 export default {
-  name: 'App',
-  components: {Header},
-}
+  name: "App",
+  components: { Header },
+};
 </script>
 
 <style>
@@ -29,6 +28,7 @@ h1 {
   color: #e76f51;
   text-shadow: 2px 2px 2px #ccc;
 }
+
 h2 {
   margin: auto;
   color: #e76f51;
@@ -36,10 +36,12 @@ h2 {
   text-shadow: 1px 1px 2px #ccc;
   text-align: center;
 }
+
 h3 {
   color: #132a55;
   text-shadow: 2px 2px 2px #ccc;
 }
+
 button {
   background-color: #1c3f7f;
   border: none;
@@ -58,16 +60,16 @@ button:hover {
   background-color: #132a55;
 }
 
-input{
+input {
   font-size: 16px;
   font-family: inherit;
   padding: 12px;
   background-color: #fff;
-  border: 2px solid #000000A0;
+  border: 2px solid #000000a0;
   border-radius: 4px;
 }
 
-.error{
+.error {
   color: red;
 }
 </style>

@@ -10,8 +10,8 @@
 
 <script>
 export default {
-  name: "Header"
-}
+  name: "Header",
+};
 </script>
 
 <style scoped>
@@ -19,7 +19,8 @@ export default {
   margin: auto;
   height: 35px;
   width: 219px;
-  background: url(https://wkncdn.com/newx/assets/build/img/workana-logo-2x.9e13d14c2.png) no-repeat;
+  background: url(https://wkncdn.com/newx/assets/build/img/workana-logo-2x.9e13d14c2.png)
+    no-repeat;
   background-size: cover;
 }
 </style>
